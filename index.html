@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dark-mode.css" id="dark-mode-stylesheet" />
+    <!-- Add this in your HTML head section -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <title>Break It Down</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="dark-mode-switch">
+        <input type="checkbox" id="dark-mode-toggle" class="checkbox" />
+        <label for="dark-mode-toggle" class="label"> </label>
+      </div>
+
+      <h1>Break It Down</h1>
+      <p class="intro-text">
+        Stay focused, boost productivity, and manage your work intervals
+        efficiently with our Pomodoro Timer.
+      </p>
+
+      <div class="timer">
+        <p id="timer-text">Work Time</p>
+        <div id="timer">25:00</div>
+      </div>
+
+      <div class="controls">
+        <button id="start-button">Start</button>
+        <button id="reset-button">Reset</button>
+      </div>
+      
+      <div class="input-fields">
+        <label for="work-time">Work Time (min):</label>
+        <input type="number" id="work-time" min="1" step="1" value="25" />
+        <label for="break-time">Break Time (min):</label>
+        <input type="number" id="break-time" min="1" step="1" value="5" />
+      </div>
+
+      <p class="explanation">
+        Welcome to <strong>Break It Down</strong> – Your Productivity Partner.
+        Supercharge your work with our Pomodoro Timer. Get ready to
+        <em>Break It Down</em> like a pro. Stay focused, take productive breaks,
+        and conquer your tasks.
+      </p>
+
+      <!-- Footer Section -->
+    </div>
+    <footer class="footer">
+      <p>&copy; 2023 Break It Down</p>
+      <p>Contact: info@breakitdown.com</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

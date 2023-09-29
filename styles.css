@@ -1,0 +1,222 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  text-align: center;
+  width: 90%;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.timer {
+  font-size: 64px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+#timer {
+  font-size: 128px;
+}
+
+.controls button:first-child {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  background: linear-gradient(to bottom, #007bff, #0056b3);
+}
+
+.controls button:focus:first-child,
+.controls button:focus:last-child {
+  outline: none;
+}
+
+.controls button:hover:first-child {
+  background-color: #0056b3;
+  background: linear-gradient(to bottom, #0056b3, #003c80);
+}
+
+.controls button:last-child {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  background: linear-gradient(to bottom, #dc3545, #b02a37);
+}
+
+.controls button:hover:last-child {
+  background-color: #b02a37;
+  background: linear-gradient(to bottom, #b02a37, #8c1d28);
+}
+
+.input-fields {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.input-fields label {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #333;
+}
+
+.input-fields input[type="number"] {
+  font-size: 18px;
+  padding: 5px;
+  width: 60px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.feature-description {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #555;
+}
+
+.features {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.features h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.features ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Add CSS styles for the explanation */
+.explanation {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #555;
+  text-align: center;
+}
+
+/* Style for the dark mode switch */
+.dark-mode-switch {
+  display: flex;
+  position: relative;
+  width: 60px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+}
+
+/* Hide the default checkbox input */
+.checkbox {
+  display: none;
+}
+
+/* Style for the switch label (button-like appearance) */
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px; /* Adjust the border radius for rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition effect */
+  background: linear-gradient(to bottom, #888888, #000000);
+}
+
+/* Style for the label when the checkbox is checked (dark mode is on) */
+.checkbox:checked + .label {
+  background-color: #444; /* Background color when dark mode is on */
+}
+
+/* Optional: Add a transition for a smooth appearance change */
+.checkbox + .label::before {
+  content: "";
+  position: absolute;
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  background-color: #fff; /* Color of the "knob" or button */
+  border-radius: 50%; /* Make it round */
+  left: 3px; /* Adjust the initial position */
+  transition: transform 0.3s; /* Smooth transition effect */
+}
+
+/* Move the knob/button to the right when the checkbox is checked */
+.checkbox:checked + .label::before {
+  transform: translateX(30px); /* Adjust the distance to move the knob */
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+/* Add a media query for screens with a maximum width of 600px (adjust as needed) */
+@media (max-width: 600px) {
+  .container {
+    max-width: 90%; /* Adjust the container width for smaller screens */
+  }
+
+  .timer {
+    font-size: 48px; /* Reduce the timer font size for smaller screens */
+  }
+
+  .controls button {
+    font-size: 16px; /* Reduce button font size for smaller screens */
+  }
+
+  .input-fields label {
+    font-size: 16px; /* Reduce label font size for smaller screens */
+  }
+
+  .input-fields input[type="number"] {
+    font-size: 14px; /* Reduce input font size for smaller screens */
+  }
+
+  .feature-description {
+    font-size: 16px; /* Reduce feature description font size for smaller screens */
+  }
+
+  .features h2 {
+    font-size: 20px; /* Adjust heading font size for smaller screens */
+  }
+
+  .features ul {
+    font-size: 16px; /* Reduce list font size for smaller screens */
+  }
+}

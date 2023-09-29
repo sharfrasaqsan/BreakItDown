@@ -1,0 +1,44 @@
+/* dark-mode.css */
+body.dark-mode {
+  background-color: #333; /* Dark background color for the entire page */
+  color: #fff; /* Light text color */
+
+  /* Dark mode styles for the container */
+  .container.dark-mode {
+    background-color: #444; /* Dark container background color */
+    color: #eee; /* Light text color for the container */
+  }
+
+  .container h1 {
+    color: #eee; /* Light text color for the container */
+  }
+
+  .timer {
+    color: #eee; /* Light text color for the container */
+  }
+
+  #timer {
+    color: #eee; /* Light text color for the container */
+  }
+
+  .input-fields [type="number"] {
+    background-color: #444; /* Dark input background color */
+    color: #eee; /* Light text color for the input */
+  }
+
+  .input-fields label {
+    color: #eee; /* Light text color for the label */
+  }
+
+  .explanation {
+    color: #eee; /* Light text color for the explanation */
+  }
+
+  .checkbox:checked + .label {
+    background: linear-gradient(to bottom, #6a6a6a, #d7d7d7);
+  }
+
+  .footer {
+    color: #ccc;
+  }
+}
