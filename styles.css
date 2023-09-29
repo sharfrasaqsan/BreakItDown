@@ -1,13 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
   flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 .container {
@@ -16,6 +19,8 @@ body {
   padding: 30px;
   text-align: center;
   width: 90%;
+  max-width: 100%; /* Adjust this line to prevent container overflow */
+  margin: 0; /* Add this to remove margin */
 }
 
 h1 {
@@ -200,13 +205,14 @@ h1 {
 }
 
 /* Add a media query for screens with a maximum width of 600px (adjust as needed) */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .container {
     max-width: 90%; /* Adjust the container width for smaller screens */
   }
 
   .timer {
-    font-size: 48px; /* Reduce the timer font size for smaller screens */
+    font-size: 40px; /* Reduce the timer font size for smaller screens */
+    margin-top: 30px;
   }
 
   .controls button {
@@ -231,5 +237,19 @@ h1 {
 
   .features ul {
     font-size: 16px; /* Reduce list font size for smaller screens */
+  }
+
+  .explanation {
+    font-size: 16px; /* Reduce explanation font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #timer {
+    font-size: 90px;
+  }
+
+  .explanation {
+    font-size: 14px;
   }
 }
